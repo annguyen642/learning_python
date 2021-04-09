@@ -5,6 +5,7 @@
 # No, you may not use math.factorial()
 # Use the same loop for both calculations
 
+#your code goes here
 n=5
 sum = 0
 fac = 1
@@ -15,7 +16,5 @@ print(n,sum, fac)
 
 
 """
-
-
-# your code goes here
+"""
 
