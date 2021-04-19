@@ -9,17 +9,14 @@ seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
 gc_count = 0
 
-for j in range(len(seq)-10):
-	nt = seq[j:j+11]
-	for i in range(len(nt)):
-		if nt[i] == 'C' or nt[i] == 'G':
+for i  in range(len(seq)-10):
+	nt = seq[i:i+11]
+	for j in range(len(nt)):
+		if nt[j] == 'C' or nt[j] == 'G':
 			gc_count += 1
-	print(j, nt, f'{gc_count/w:.4f}')
+	print(i, nt, f'{gc_count/w:.4f}')
 	gc_count = 0
 
-	
-
-  
 
 """
 python3 gc_win.py
