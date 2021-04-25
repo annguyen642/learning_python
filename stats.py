@@ -45,10 +45,10 @@ if len(p) % 2 == 0:
 	med_1= len(p)//2 
 	med_2= len(p)//2 -1
 	med= (p[med_1] + p[med_2])/2
-	print(f'{txt}: {med}')
+	print(f'{txt}: {med:.3f}')
 else:
 	med= len(p)//2
-	print(f'{txt}:{p[med]}')
+	print(f'{txt}:{p[med]:.3f}')
 
 
 
