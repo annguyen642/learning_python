@@ -28,9 +28,8 @@ read = 0
 for v in genome[read_length:-read_length]: #sampling genome starting at the first 100 and last 100 (100 is the read_length)
 	if v < min: min=v
 	if v > max: max=v
-	read+=v
-mean = read/(genome_size - 2*read_length) #avg is adding up the reads over the coverage of the genome excluding both ends
-print(min, max,f'{mean:.5f}')
+	read+=v #avg is adding up the reads over the coverage of the genome excluding both ends
+print(min, max, f'{read/(genome_size - 2*read_length):.5f}')
 
 
 
