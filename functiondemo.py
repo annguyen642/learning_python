@@ -1,6 +1,6 @@
 import random
 
-def atseq(length, at):
+def atseq(length, at)
 	assert(length > 0)
 	assert(at >= 0 and at <= 1)
 	seq = [] #empty sequance
