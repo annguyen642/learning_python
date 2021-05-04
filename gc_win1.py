@@ -9,8 +9,8 @@ seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
 gc_count = 0
 
-for i  in range(len(seq)-10):
-	nt = seq[i:i+11]
+for i  in range(len(seq)-w-1):
+	nt = seq[i:i+w]
 	for j in range(len(nt)):
 		if nt[j] == 'C' or nt[j] == 'G':
 			gc_count += 1
