@@ -39,7 +39,7 @@ def kd(seq):
 		elif seq[i] == 'R': kd_count -= 4.5
 	return kd_count/len(seq)
 
-#identify sequences with Proline to later fine sequence with no P in them 
+#identify sequences with Proline to later find sequence with no P in them 
 def contain_P(seq):
 	for aa in seq:
 		if aa == 'P': return True
