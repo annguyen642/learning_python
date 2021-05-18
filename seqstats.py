@@ -4,15 +4,6 @@ import argparse
 import mcb185
 import statistics
 
-# Write a program that computes statistics about a fasta file
-#   Number of sequences
-#   Total length
-#   Minimum and maximum lengths
-#   Average and median lengths
-#   N50 length, similar to a median, length of which half of the sum corresponds to greater than half of the length of sequence 
-# Use argparse
-# Make useful functions and add them to your library
-
 parser = argparse.ArgumentParser(description='stats about sequence.')
 # required arguments
 parser.add_argument('--file', required=True, type=str,
@@ -21,7 +12,7 @@ arg = parser.parse_args()
 
 length = []
 for name in seq in mcb185.read_fasta(arg.file):
-	print(name,len(seq))
+	#print(name,len(seq))
 	length.append(len(seq))
 
 length.sort()
