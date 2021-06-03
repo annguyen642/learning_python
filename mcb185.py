@@ -73,3 +73,37 @@ def translate(seq):
 		else:
 			protein += 'x'
 	return protein 
+#reverse complement 
+def anti(seq):
+	revcomp = ''
+	for i in range(len(seq)-1, -1, -1):
+		nt = seq[i]
+		if   nt == 'A': nt +='T'
+		elif nt == 'T': nt +='A'
+		elif nt == 'C': nt +='G'
+		elif nt == 'G': nt +='C'
+		else          : nt = 'N'
+		revcomp +=nt
+	return revcomp 
+
+#print open reading frame of seq
+def longest_seq(seq):
+	longest_seq= ''
+	max_seq    = ''
+	for i in range(len(seq) - 2):
+		start = None
+		stop  = None
+		if seq[i:i +3] == 'ATG':
+			start = i
+			for j in range(i, len(seq) -2, 3):
+				codon =  seq[j:j+3]
+				if codon == 'TAA' or codon == 'TGA' or codon == 'TAG':
+					stop = j
+					break
+		if stop != None: longest_seq = seq[start:stop]
+		if len(longest_seq) > len(max_seq): max_seq = longest_seq			
+	return max_seq
+
+
+
+	
