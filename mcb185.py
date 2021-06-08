@@ -22,7 +22,7 @@ def read_fasta(filename):
 				seq.append(line)
 	yield name, ''.join(seq)
 
-#orf =open reading frame
+#orf =open reading frame, print out numeric length
 def orf(seq):
 	#look for ATG
 	length = []
